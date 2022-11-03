@@ -52,3 +52,23 @@
 Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
 [<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+
+<br><br><br>
+
+# TO DO - build and deploy (GitHub Pages)
+- `npm install gh-pages --save-dev`
+- Add path prefix in `gatsby-config.js`:
+  ```javascript
+  module.exports = {
+    pathPrefix: '/reponame',
+  };
+  ```
+- Then add a deploy script to `package.json`:
+  ```javascript
+  {
+    "scripts": {
+      "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    }
+  }
+  ```
+- `npm run deploy`
